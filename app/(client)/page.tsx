@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -47,7 +48,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in fade-in-0 duration-1000">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Main Mission</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 At Tonse Tingathe, we believe every child can learn in their own way. We provide tailored support for
                 children with special needs across Malawi, creating an inclusive environment where every child can

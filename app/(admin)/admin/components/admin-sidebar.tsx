@@ -25,11 +25,11 @@ const navigation = [
   { name: "Instructors", href: "/admin/instructors", icon: UserCheck },
   { name: "Sessions", href: "/admin/sessions", icon: Video },
   { name: "Schedule", href: "/admin/schedule", icon: Calendar },
-  { name: "Content", href: "/admin/content", icon: FileText },
-  { name: "Messages", href: "/admin/messages", icon: MessageSquare },
-  { name: "Reports", href: "/admin/reports", icon: BarChart3 },
-  { name: "Documents", href: "/admin/documents", icon: FolderOpen },
-  { name: "Settings", href: "/admin/settings", icon: Settings },
+  { name: "Resources", href: "/admin/resources", icon: FileText },
+  // { name: "Messages", href: "/admin/messages", icon: MessageSquare },
+  // { name: "Reports", href: "/admin/reports", icon: BarChart3 },
+  // { name: "Documents", href: "/admin/documents", icon: FolderOpen },
+  // { name: "Settings", href: "/admin/settings", icon: Settings },
 ]
 
 export default function AdminSidebar() {
