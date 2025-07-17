@@ -17,13 +17,15 @@ import {
   ChevronLeft,
   ChevronRight,
   Heart,
+  BookOpenIcon,
 } from "lucide-react"
 
 const navigation = [
   { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
-  { name: "Students", href: "/admin/students", icon: Users },
   { name: "Instructors", href: "/admin/instructors", icon: UserCheck },
-  { name: "Sessions", href: "/admin/sessions", icon: Video },
+  { name: "Subjects", href: "/admin/subjects", icon: BookOpenIcon },
+  { name: "Students", href: "/admin/students", icon: Users },
+  // { name: "Sessions", href: "/admin/sessions", icon: Video },
   { name: "Schedule", href: "/admin/schedule", icon: Calendar },
   { name: "Resources", href: "/admin/resources", icon: FileText },
   // { name: "Messages", href: "/admin/messages", icon: MessageSquare },

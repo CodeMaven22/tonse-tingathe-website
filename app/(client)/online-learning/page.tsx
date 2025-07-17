@@ -127,24 +127,24 @@ export default function OnlineLearningPage() {
     // Communication subjects
     {
       id: 1,
-      title: "Sign Language Basics",
-      instructor: "Sarah Mwale",
-      duration: "8 weeks",
-      level: "Beginner to Advanced",
-      students: 245,
-      rating: 4.8,
+      title: "English language ",
+      // instructor: "Sarah Mwale",
+      // duration: "8 weeks",
+      // level: "Beginner to Advanced",
+      // students: 245,
+      // rating: 4.8,
       image: "/placeholder.svg?height=200&width=300",
-      description: "Learn fundamental sign language skills for daily communication.",
+      description: "Phonics and letter recognition, reading fluency, spelling and vocabulary and writing",
       category: "Communication",
     },
     {
       id: 2,
       title: "Speech Therapy",
-      instructor: "Dr. James Phiri",
-      duration: "12 weeks",
-      level: "All Ages",
-      students: 189,
-      rating: 4.9,
+      // instructor: "Dr. James Phiri",
+      // duration: "12 weeks",
+      // level: "All Ages",
+      // students: 189,
+      // rating: 4.9,
       image: "/placeholder.svg?height=200&width=300",
       description: "Comprehensive speech therapy techniques and exercises.",
       category: "Communication",
@@ -730,16 +730,16 @@ export default function OnlineLearningPage() {
                       <Badge variant="outline" className="text-xs">
                         {subject.category}
                       </Badge>
-                      <div className="flex items-center space-x-1">
+                      {/* <div className="flex items-center space-x-1">
                         <span className="text-sm text-yellow-500">★</span>
                         <span className="text-sm text-gray-600">{subject.rating}</span>
-                      </div>
+                      </div> */}
                     </div>
                     <CardTitle className="text-lg">{subject.title}</CardTitle>
                     <p className="text-sm text-gray-600">{subject.description}</p>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <div className="space-y-3">
+                    {/* <div className="space-y-3">
                       <div className="flex items-center justify-between text-sm text-gray-600">
                         <span>Instructor: {subject.instructor}</span>
                         <Badge variant="secondary">{subject.level}</Badge>
@@ -754,8 +754,9 @@ export default function OnlineLearningPage() {
                           <span>{subject.students} students</span>
                         </div>
                       </div>
-                      <Button className="w-full bg-primary-orange hover:bg-primary-orange-dark">Enroll Now</Button>
-                    </div>
+                    </div> */}
+                    <Button className="w-full bg-primary-orange hover:bg-primary-orange-dark">Enroll Now</Button>
+
                   </CardContent>
                 </Card>
               ))}
