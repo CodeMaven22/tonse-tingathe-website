@@ -29,59 +29,63 @@ export default function ServicesPage() {
 
   const services = [
     {
-      title: "Specialized Education Programs",
+      title: "Online Teaching Sessions",
       icon: <Brain className="h-6 w-6 text-primary-orange" />,
       image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=300&h=200&fit=crop&crop=faces",
       imageAlt: "African children with autism and Down syndrome learning with adaptive technology and visual aids",
-      description: "Comprehensive educational support for children with diverse learning needs",
+      description: "We offer one-on-one and small group classes with special needs ",
       details: [
-        "Programs for children with autism spectrum disorders",
-        "Support for children with Down syndrome and intellectual disabilities",
-        "Visual aids and sensory-friendly classroom environments",
-        "Adaptive learning technologies and tools",
-        "One-on-one and small group instruction",
+        // "Programs for children with autism spectrum disorders",
+        // "Support for children with Down syndrome and intellectual disabilities",
+        // "Visual aids and sensory-friendly classroom environments",
+        // "Adaptive learning technologies and tools",
+        // "One-on-one and small group instruction",
       ],
     },
     {
-      title: "Sign Language Training",
+      title: "Parents and Teachers Training",
       icon: <MessageSquare className="h-6 w-6 text-primary-orange" />,
       image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=300&h=200&fit=crop&crop=faces",
       imageAlt: "African sign language instructor teaching MSL to deaf children with interactive video displays",
-      description: "Interactive Malawi Sign Language lessons for deaf and hard-of-hearing children",
+      description: "We equip parents , caregivers and teachers with practical tools and support children with special needs needs at home or in their classrooms.",
       details: [
-        "Malawi Sign Language (MSL) instruction",
-        "Interactive video lessons with slow-motion playback",
+        "Behavior management",
+        "Communication strategies",
         "Basic to advanced sign language curriculum",
-        "Family sign language workshops",
-        "Integration with regular academic subjects",
+        "Home learning techniques ",
+        "Inclusive classroom methods",
       ],
     },
+
     {
-      title: "Speech & Language Therapy",
-      icon: <Mic className="h-6 w-6 text-primary-orange" />,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=faces",
-      imageAlt: "African speech therapist working with a child using communication devices and therapy tools",
-      description: "Professional therapy for children with speech delays and communication disorders",
-      details: [
-        "Individual speech therapy sessions",
-        "Language development programs",
-        "Articulation and pronunciation training",
-        "Communication device training",
-        "Parent coaching for home practice",
-      ],
-    },
-    {
-      title: "Parent & Teacher Support",
+      title: "Downloadable learning materials",
       icon: <Users className="h-6 w-6 text-primary-orange" />,
       image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=300&h=200&fit=crop&crop=faces",
       imageAlt: "African workshop session with parents and teachers learning inclusive education strategies",
       description: "Comprehensive training and resources for families and educators",
       details: [
-        "Inclusive teaching strategy workshops",
+        "flash cards and visual schedulers ",
         "At-home learning resource development",
-        "Behavior management techniques",
-        "IEP (Individualized Education Program) development",
-        "Regular progress monitoring and consultation",
+        "Communication boards",
+        "Simple lesson plan ",
+        "Simple  IEP(individualized Education Plan)",
+        "Behavior chats"
+      ],
+    },
+
+    {
+      title: "Consultation and support ",
+      icon: <Users className="h-6 w-6 text-primary-orange" />,
+      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=300&h=200&fit=crop&crop=faces",
+      imageAlt: "African workshop session with parents and teachers learning inclusive education strategies",
+      description: "need help in understanding your child’s behavior or learning challenges? Book a private consultation with our special needs educator for guidance and personalized strategies",
+      details: [
+        // "flash cards and visual schedulers ",
+        // "At-home learning resource development",
+        // "Communication boards",
+        // "Simple lesson plan ",
+        // "Simple  IEP(individualized Education Plan)",
+        // "Behavior chats"
       ],
     },
   ]
@@ -204,7 +208,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Meet Our Expert Instructors Section - Moved from online learning */}
-          <section className="py-16 bg-gray-50 rounded-lg mb-16">
+          {/* <section className="py-16 bg-gray-50 rounded-lg mb-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Instructors</h2>
@@ -278,7 +282,7 @@ export default function ServicesPage() {
                 ))}
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* Additional Services */}
           <div className="bg-gray-50 rounded-lg p-8 mb-16 animate-in fade-in-0 duration-1000 delay-800">
@@ -286,18 +290,23 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <Eye className="h-8 w-8 text-primary-orange mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Vision Support</h3>
-                <p className="text-gray-600 text-sm">Specialized programs for children with visual impairments</p>
+                <h3 className="font-semibold text-gray-900 mb-2">Therapy sessions</h3>
+                <p className="text-gray-600 text-sm">speech and language therapy, occupation therapy and Behavior therapy</p>
               </div>
               <div className="text-center">
                 <Ear className="h-8 w-8 text-primary-orange mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Hearing Support</h3>
-                <p className="text-gray-600 text-sm">Comprehensive hearing assistance and auditory training</p>
+                <h3 className="font-semibold text-gray-900 mb-2">Parents and care givers coaching</h3>
+                <p className="text-gray-600 text-sm"> Understanding the child’s diagnosis, how to support learning at home, Daily routine and lndependence training </p>
               </div>
               <div className="text-center">
                 <Heart className="h-8 w-8 text-primary-orange mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Emotional Support</h3>
-                <p className="text-gray-600 text-sm">Counseling and emotional development programs</p>
+                <h3 className="font-semibold text-gray-900 mb-2">Individualized learning support</h3>
+                <p className="text-gray-600 text-sm">IEP consultation or review, help writing IEP or Understanding IEP,Home work support and Tailored learning plans based on the students needs</p>
+              </div>
+              <div className="text-center">
+                <Heart className="h-8 w-8 text-primary-orange mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-2">Work shops </h3>
+                <p className="text-gray-600 text-sm">.for parents and caregivers ,learners and for educators .These will be done through: live via zoom ,Pre recorded sessions and In persons </p>
               </div>
             </div>
           </div>
