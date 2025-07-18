@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Heart, User } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import AuthModal from "./auth-modal"
 import StudentDashboard from "./student-dashboard"
@@ -23,10 +24,9 @@ export default function Navigation() {
   ]
 
   const handleSignIn = (email: string, password: string) => {
-    // Mock authentication - in real app, this would call an API
+    // Mock authentication
     console.log("Signing in:", email, password)
 
-    // Mock user data
     const mockUser = {
       firstName: "John",
       lastName: "Doe",
@@ -41,7 +41,6 @@ export default function Navigation() {
   }
 
   const handleSignUp = (userData: any) => {
-    // Mock registration - in real app, this would call an API
     console.log("Signing up:", userData)
 
     const newUser = {
@@ -70,7 +69,6 @@ export default function Navigation() {
     }
   }
 
-  // Show dashboard if user is signed in and dashboard is active
   if (showDashboard && currentUser) {
     return <StudentDashboard student={currentUser} onSignOut={handleSignOut} />
   }
@@ -79,15 +77,21 @@ export default function Navigation() {
     <>
       <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
+          <div className="flex justify-between h-24 items-center">
             <div className="flex items-center">
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-xl font-bold text-primary-orange hover:text-primary-orange-dark transition-colors"
+                className="flex items-center"
                 onClick={() => setShowDashboard(false)}
               >
-                <Heart className="h-6 w-6" />
-                <span>Tonse Tingathe</span>
+                <Image 
+                  src="/images/logo.png"
+                  alt="Tonse Tingathe Logo"
+                  width={229}
+                  height={116}
+                  className="h-16 w-auto object-contain hover:scale-105 transition-transform"
+                  priority={true}
+                />
               </Link>
             </div>
 
@@ -199,7 +203,6 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Auth Modal */}
       <AuthModal
         isOpen={showAuthModal}
         onClose={() => setShowAuthModal(false)}
