@@ -27,14 +27,14 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: "Miss Mirriam Duwe",
+      name: "Mirriam Duwe",
       role: "Founder & Director",
       qualification: "Master's in Special Needs Education",
-      image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300&h=300&fit=crop&crop=faces",
+      image: "/images/owner.jpg",
       imageAlt: "Professional headshot of Miss Mirriam Duwe, a warm and approachable African educator",
       bio: "Passionate educator with over 10 years of experience in special needs education and inclusive learning.",
     },
-    {
+    {/*{
       name: "Dr. Sarah Banda",
       role: "Speech Therapist",
       qualification: "PhD in Speech-Language Pathology",
@@ -49,7 +49,7 @@ export default function AboutPage() {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=faces",
       imageAlt: "Mr. James Phiri demonstrating sign language with visual learning aids in the background",
       bio: "Native MSL speaker with expertise in deaf education and visual learning methodologies.",
-    },
+    },*/}
   ]
 
   const values = [
@@ -126,15 +126,15 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="space-y-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=250&fit=crop&crop=faces"
+                 {/* <Image
+                    src="/images/owner.jpg"
                     alt="Miss Mirriam Duwe working with African children with special needs in the early days of the center"
                     width={400}
                     height={250}
                     className="rounded-lg shadow-md"
-                  />
+                  />*/}
                   <Image
-                    src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=200&fit=crop&crop=faces"
+                    src="/images/mirrium.jpg"
                     alt="Timeline showing the growth of Tonse Tingathe from 2018 to present with milestone achievements"
                     width={400}
                     height={200}
@@ -167,14 +167,35 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Meet the Team */}
+          {/* Meet the Founder */}
           <section className="mb-16 animate-in fade-in-0 duration-1000 delay-600">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-              <p className="text-lg text-gray-600">Dedicated professionals committed to your child's success</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet The Founder</h2>
+              <p className="text-lg text-gray-600">The visionary behind Tonse Tingathe Learning Center</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
+            <div className="flex justify-center">
+              <div className="w-full max-w-md">
+                <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <CardContent className="p-6 text-center">
+                    <Image
+                      src={teamMembers[0].image || "/placeholder.svg"}
+                      alt={teamMembers[0].imageAlt || teamMembers[0].name}
+                      width={200}
+                      height={200}
+                      className="rounded-full mx-auto mb-4 object-cover"
+                    />
+                    <h3 className="text-xl font-semibold text-gray-900 mb-1">{teamMembers[0].name}</h3>
+                    <p className="text-primary-orange font-medium mb-2">{teamMembers[0].role}</p>
+                    <p className="text-sm text-gray-500 mb-3">{teamMembers[0].qualification}</p>
+                    <p className="text-gray-600 text-sm">{teamMembers[0].bio}</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Commented out team members for future use */}
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {teamMembers.slice(1).map((member, index) => (
                 <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="p-6 text-center">
                     <Image
@@ -191,7 +212,7 @@ export default function AboutPage() {
                   </CardContent>
                 </Card>
               ))}
-            </div>
+            </div> */}
           </section>
 
           {/* Why Choose Us */}
