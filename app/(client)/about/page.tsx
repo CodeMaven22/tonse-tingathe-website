@@ -110,19 +110,17 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    Tonse Tingathe Learning Center was founded by Miss Mirriam Duwe, whose personal journey with special
-                    needs education began when she witnessed the challenges faced by children with disabilities in
-                    accessing quality education in Malawi.
+                      The story of Tonse Tingathe Learning Center began with a question that wouldn’t let go of me:
+                      “What happens to the learners who don’t get assistance in classroom?”
+                      As a teacher with a background in Special Needs Education, I spent years working with children and youth who were often misunderstood, unsupported, or completely left out of the system. I saw students with learning differences labeled as failures. Others dropped out of school—not because they weren’t intelligent, but because they lacked resources, encouragement, or someone to believe in them.
                   </p>
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    Driven by a deep commitment to inclusive education, Miss Duwe established the center in 2018 with
-                    the vision of creating a space where every child, regardless of their abilities, could learn, grow,
-                    and thrive.
+                    That reality broke my heart—and sparked a vision.
+                    I started Tonse Tingathe (which means “Together We Can”) because I believed something better was possible.
+                    I wanted to create a place where every child, regardless of their abilities, could thrive. A center that would not only provide specialized education and therapy but also foster a community of support for families navigating the challenges of raising children with special needs.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    Today, we stand as a beacon of hope for families across Malawi, providing specialized education,
-                    therapy, and support services that have transformed the lives of hundreds of children and their
-                    families.
+                    This encouraged me to create a safe, inclusive space where every learner—regardless of ability, background, or circumstance—could access quality education, discover their strengths, and build a future.
                   </p>
                 </div>
                 <div className="space-y-4">
