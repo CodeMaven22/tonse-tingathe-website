@@ -1,11 +1,15 @@
+'use client'
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
-import { Heart, Users, Target, CheckCircle, Star } from "lucide-react"
+import { Heart, Users, Target, CheckCircle, Star, ChevronDown, ChevronUp } from "lucide-react"
 import HeroCarousel from "../components/hero-carousel"
 
 export default function AboutPage() {
+  const [expanded, setExpanded] = useState(false)
+  
   const heroImages = [
     {
       src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=1200&h=600&fit=crop&crop=faces",
@@ -29,12 +33,13 @@ export default function AboutPage() {
     {
       name: "Mirriam Duwe",
       role: "Founder & Director",
-      qualification: "Master's in Special Needs Education",
+      qualification: "Bachelor's Degree in Special Needs Education",
       image: "/images/owner.jpg",
       imageAlt: "Professional headshot of Miss Mirriam Duwe, a warm and approachable African educator",
-      bio: "Passionate educator with over 10 years of experience in special needs education and inclusive learning.",
-    },
-    {/*{
+      bioPreview: "My name is Miss Mirriam Duwe, and I am the founder of Tonse Tingathe Learning Center.",
+      bioFull: "I hold a Bachelor's Degree in Special Needs Education with a minor in English, and I have dedicated my career to creating spaces where every learner—regardless of their ability or background—has the chance to thrive.\n\nBefore starting Tonse Tingathe, I worked extensively as a Teacher and Personal Learning Assistant (PLA) in various schools. Over the years, I supported learners with a wide range of educational needs—helping them access the curriculum, build confidence, and succeed in inclusive classroom settings.\n\nThis work was more than just a job—it was transformative. I saw firsthand how the right support can unlock a child's potential. I experienced the power of patience, individualized attention, and tailored learning strategies. And I learned that with the right environment, every child is capable of achieving more than the world expects."
+    }
+    /*{
       name: "Dr. Sarah Banda",
       role: "Speech Therapist",
       qualification: "PhD in Speech-Language Pathology",
@@ -49,7 +54,7 @@ export default function AboutPage() {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=faces",
       imageAlt: "Mr. James Phiri demonstrating sign language with visual learning aids in the background",
       bio: "Native MSL speaker with expertise in deaf education and visual learning methodologies.",
-    },*/}
+    },*/
   ]
 
   const values = [
@@ -110,13 +115,13 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                      The story of Tonse Tingathe Learning Center began with a question that wouldn’t let go of me:
-                      “What happens to the learners who don’t get assistance in classroom?”
-                      As a teacher with a background in Special Needs Education, I spent years working with children and youth who were often misunderstood, unsupported, or completely left out of the system. I saw students with learning differences labeled as failures. Others dropped out of school—not because they weren’t intelligent, but because they lacked resources, encouragement, or someone to believe in them.
+                    The story of Tonse Tingathe Learning Center began with a question that wouldn't let go of me:
+                    "What happens to the learners who don't get assistance in classroom?"
+                    As a teacher with a background in Special Needs Education, I spent years working with children and youth who were often misunderstood, unsupported, or completely left out of the system. I saw students with learning differences labeled as failures. Others dropped out of school—not because they weren't intelligent, but because they lacked resources, encouragement, or someone to believe in them.
                   </p>
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     That reality broke my heart—and sparked a vision.
-                    I started Tonse Tingathe (which means “Together We Can”) because I believed something better was possible.
+                    I started Tonse Tingathe (which means "Together We Can") because I believed something better was possible.
                     I wanted to create a place where every child, regardless of their abilities, could thrive. A center that would not only provide specialized education and therapy but also foster a community of support for families navigating the challenges of raising children with special needs.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
@@ -124,13 +129,6 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="space-y-4">
-                 {/* <Image
-                    src="/images/owner.jpg"
-                    alt="Miss Mirriam Duwe working with African children with special needs in the early days of the center"
-                    width={400}
-                    height={250}
-                    className="rounded-lg shadow-md"
-                  />*/}
                   <Image
                     src="/images/mirrium.jpg"
                     alt="Timeline showing the growth of Tonse Tingathe from 2018 to present with milestone achievements"
@@ -185,32 +183,31 @@ export default function AboutPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-1">{teamMembers[0].name}</h3>
                     <p className="text-primary-orange font-medium mb-2">{teamMembers[0].role}</p>
                     <p className="text-sm text-gray-500 mb-3">{teamMembers[0].qualification}</p>
-                    <p className="text-gray-600 text-sm">{teamMembers[0].bio}</p>
+                    
+                    <div className="text-gray-600 text-sm text-left">
+                      <p>{teamMembers[0].bioPreview}</p>
+                      <div className={`transition-all duration-300 overflow-hidden ${expanded ? 'max-h-[500px]' : 'max-h-0'}`}>
+                        <p className="pt-2 whitespace-pre-line">{teamMembers[0].bioFull}</p>
+                      </div>
+                      <button 
+                        onClick={() => setExpanded(!expanded)}
+                        className="text-primary-orange hover:underline mt-2 text-sm font-medium flex items-center gap-1"
+                      >
+                        {expanded ? (
+                          <>
+                            <ChevronUp className="w-4 h-4" /> See Less
+                          </>
+                        ) : (
+                          <>
+                            <ChevronDown className="w-4 h-4" /> See More
+                          </>
+                        )}
+                      </button>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
-
-            {/* Commented out team members for future use */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {teamMembers.slice(1).map((member, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.imageAlt || member.name}
-                      width={200}
-                      height={200}
-                      className="rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-primary-orange font-medium mb-2">{member.role}</p>
-                    <p className="text-sm text-gray-500 mb-3">{member.qualification}</p>
-                    <p className="text-gray-600 text-sm">{member.bio}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div> */}
           </section>
 
           {/* Why Choose Us */}
